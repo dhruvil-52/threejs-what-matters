@@ -49,6 +49,11 @@ const pointLightHelper = new THREE.PointLightHelper(pointLight, 1); // 1 is the 
 scene.add(pointLightHelper);
 
 const loader = new THREE.TextureLoader();
+// set background image
+const backgroundTexture = loader.load("./images/galaxy.jpg", () => {
+  scene.background = backgroundTexture;
+});
+
 const color = loader.load("./images/earth.jpg");
 const roughness = loader.load("./images/roughness.png"); // use for rough or smooth
 const normal = loader.load("./images/normal.png");
