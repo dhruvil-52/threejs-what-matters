@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import GUI from "lil-gui";
 
 // create scene (whole world)
 const scene = new THREE.Scene();
@@ -97,6 +98,38 @@ controls.keys = {
 
 // Increase pan speed for quicker movement
 controls.keyPanSpeed = 30; // Adjust this to control the speed of key panning
+
+// Create GUI
+const gui = new GUI();
+// Add controls for MeshStandardMaterial properties
+const materialFolder = gui.addFolder("Material Settings");
+// Adjust roughness
+materialFolder.add(material, "roughness", 0, 1).name("Roughness");
+// Adjust metalness
+materialFolder.add(material, "metalness", 0, 1).name("Metalness");
+// Add color control (using a color picker)
+materialFolder.addColor(material, "color").name("Color");
+// Controls for maps (you'll need to make sure maps are set up beforehand)
+materialFolder.add(material, "wireframe").name("Wireframe");
+// Don't forget to open the folder
+materialFolder.open();
+
+// Mesh Settings
+const meshFolder = gui.addFolder("Mesh Settings");
+// Position controls
+meshFolder.add(cube.position, "x", -10, 10).name("Position X");
+meshFolder.add(cube.position, "y", -10, 10).name("Position Y");
+meshFolder.add(cube.position, "z", -10, 10).name("Position Z");
+// Rotation controls
+meshFolder.add(cube.rotation, "x", 0, Math.PI * 2).name("Rotation X");
+meshFolder.add(cube.rotation, "y", 0, Math.PI * 2).name("Rotation Y");
+meshFolder.add(cube.rotation, "z", 0, Math.PI * 2).name("Rotation Z");
+// Scale controls
+meshFolder.add(cube.scale, "x", 0.1, 5).name("Scale X");
+meshFolder.add(cube.scale, "y", 0.1, 5).name("Scale Y");
+meshFolder.add(cube.scale, "z", 0.1, 5).name("Scale Z");
+// Don't forget to open the folder
+meshFolder.open();
 
 // animate our scene
 function animate() {
