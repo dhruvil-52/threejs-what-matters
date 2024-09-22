@@ -24,11 +24,11 @@ const camera = new THREE.PerspectiveCamera(
 // scene.add(cube);
 
 // Ambient Light (from every where there are same light)
-const ambientLight = new THREE.AmbientLight(0xffffff, 1); // White ambient light with intensity 1
+const ambientLight = new THREE.AmbientLight(0x000000, 1); // White ambient light with intensity 1
 scene.add(ambientLight);
 
 // Directional Light (if you want to throw light from perticular direction)
-const directionalLight = new THREE.DirectionalLight(0xffffff, 5); // White light with high intensity
+const directionalLight = new THREE.DirectionalLight(0xffffce, 5); // White light with high intensity
 directionalLight.position.set(10, 20, 15); // Set the position of the light
 scene.add(directionalLight);
 
@@ -40,7 +40,7 @@ const directionalLightHelper = new THREE.DirectionalLightHelper(
 scene.add(directionalLightHelper);
 
 // Point Light (simulate light sources that emit light in all directions from a single point, similar to a light bulb.)
-const pointLight = new THREE.PointLight("red", 1, 10, 2); // White light, intensity 1, distance 100
+const pointLight = new THREE.PointLight(0xffffff, 50, 10, 2); // White light, intensity 1, distance 100
 pointLight.position.set(-10, -2, -15); // Set the position of the light
 scene.add(pointLight);
 
