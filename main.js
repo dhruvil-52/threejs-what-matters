@@ -114,7 +114,7 @@ materialFolder.addColor(material, "color").name("Color");
 // Controls for maps (you'll need to make sure maps are set up beforehand)
 materialFolder.add(material, "wireframe").name("Wireframe");
 // Don't forget to open the folder
-materialFolder.open();
+materialFolder.close();
 
 // Mesh Settings
 const meshFolder = gui.addFolder("Mesh Settings");
@@ -131,7 +131,47 @@ meshFolder.add(cube.scale, "x", 0.1, 5).name("Scale X");
 meshFolder.add(cube.scale, "y", 0.1, 5).name("Scale Y");
 meshFolder.add(cube.scale, "z", 0.1, 5).name("Scale Z");
 // Don't forget to open the folder
-meshFolder.open();
+meshFolder.close();
+
+// Ambient Light Settings
+const ambientFolder = gui.addFolder("Ambient Light");
+ambientFolder.add(ambientLight, "intensity", 0, 1).name("Intensity");
+ambientFolder.addColor(ambientLight, "color").name("Color");
+ambientFolder.close();
+
+// Directional Light Settings
+const directionalFolder = gui.addFolder("Directional Light");
+directionalFolder
+  .add(directionalLight.position, "x", -10, 100)
+  .name("Position X");
+directionalFolder
+  .add(directionalLight.position, "y", -10, 100)
+  .name("Position Y");
+directionalFolder
+  .add(directionalLight.position, "z", -10, 100)
+  .name("Position Z");
+directionalFolder.add(directionalLight, "intensity", 0, 100).name("Intensity");
+directionalFolder
+  .add(directionalLight.shadow, "bias", -0.01, 100)
+  .name("Shadow Bias");
+directionalFolder
+  .addColor({ color: directionalLight.color.getHex() }, "color")
+  .name("Color")
+  .onChange((value) => {
+    directionalLight.color.set(value);
+  });
+directionalFolder.close();
+
+// Point Light Settings
+const pointFolder = gui.addFolder("Point Light");
+pointFolder.add(pointLight.position, "x", -10, 100).name("Position X");
+pointFolder.add(pointLight.position, "y", -10, 100).name("Position Y");
+pointFolder.add(pointLight.position, "z", -10, 100).name("Position Z");
+pointFolder.add(pointLight, "intensity", 0, 100).name("Intensity");
+pointFolder.add(pointLight, "distance", 0, 100).name("Distance");
+pointFolder.add(pointLight, "decay", 1, 2).name("Decay");
+pointFolder.addColor(pointLight, "color").name("Color");
+pointFolder.close();
 
 // animate our scene
 function animate() {
