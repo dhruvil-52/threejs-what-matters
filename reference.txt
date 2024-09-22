@@ -1,12 +1,13 @@
 3D website and animation
 1. WebGL
    Three.js: A popular JavaScript library that simplifies working with WebGL, enabling the creation of complex 3D graphics and animations.
+   learnt from: https://www.youtube.com/watch?v=B-4eN1Pb7qo&t=118s
 	https://freefrontend.com/three-js-examples/
 	https://threejs.org/examples/#webgl_animation_skinning_ik
 	https://github.com/mrdoob/three.js
 	https://threejs.org/
 
-    Babylon.js: Another powerful 3D engine for WebGL, suitable for creating 3D games and interactive visualizations.
+   Babylon.js: Another powerful 3D engine for WebGL, suitable for creating 3D games and interactive visualizations.
 
 	ACCOUNTS
         https://codepen.io/collection/AGZywR
@@ -65,15 +66,3 @@
    OBJ/FBX: Common 3D file formats supported by many 3D modeling tools.
 9. WebXR
    Virtual & Augmented Reality: Learn how to create immersive 3D experiences that work with VR/AR devices.
-
-
-	
-
-
-
-
-
-
-
-
-
