@@ -29,10 +29,27 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 // control our object by using orbit controls
 const controls = new OrbitControls(camera, renderer.domElement);
 
+controls.autoRotate = true;
+controls.autoRotateSpeed = 10.0; // autoRotate need to be true
+controls.enableDamping = true; // Enable damping for smooth movement
+controls.dampingFactor = 1.05; // Adjust damping factor (how much take a time to stop rotate) ( value is smaller >  more time to stop)
+controls.screenSpacePanning = true; // Allow panning up/down and left/right
+controls.enablePan = true; // Enable panning
+
+// Set the keys for panning (optional)
+controls.keys = {
+  LEFT: "ArrowLeft", // Move left
+  UP: "ArrowUp", // Move up
+  RIGHT: "ArrowRight", // Move right
+  BOTTOM: "ArrowDown", // Move down
+};
+
+// Increase pan speed for quicker movement
+controls.keyPanSpeed = 30; // Adjust this to control the speed of key panning
+
 // animate our scene
 function animate() {
   requestAnimationFrame(animate);
-  cube.rotation.x += 0.01;
   cube.rotation.y += 0.01;
   controls.update();
   renderer.render(scene, camera);
