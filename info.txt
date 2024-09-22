@@ -1,0 +1,79 @@
+3D website and animation
+1. WebGL
+   Three.js: A popular JavaScript library that simplifies working with WebGL, enabling the creation of complex 3D graphics and animations.
+	https://freefrontend.com/three-js-examples/
+	https://threejs.org/examples/#webgl_animation_skinning_ik
+	https://github.com/mrdoob/three.js
+	https://threejs.org/
+
+    Babylon.js: Another powerful 3D engine for WebGL, suitable for creating 3D games and interactive visualizations.
+
+	ACCOUNTS
+        https://codepen.io/collection/AGZywR
+        https://codepen.io/soju22/
+        https://codepen.io/shubniggurath/pens/
+    Liked Animations
+        https://codepen.io/isladjan/pen/bGpjZwN
+        https://codepen.io/soju22/pen/PLeLwo
+        https://codepen.io/shubniggurath/pen/BVKgJK
+        https://codepen.io/Yakudoo/pen/yNjRRL
+        https://codepen.io/Yakudoo/pen/YXxmYR
+        https://codepen.io/Yakudoo/pen/LVyJXw
+        https://codepen.io/Yakudoo/pen/BNNGBq
+        https://codepen.io/aperesso/pen/KyMzzp
+        https://codepen.io/elliezen/pen/GWbBrx
+        https://codepen.io/kevoj/pen/BWgvOj
+        https://codepen.io/shshaw/pen/VmBrWE
+        https://codepen.io/knoland/pen/XKxrJb
+        https://codepen.io/vcomics/pen/aGmoae
+        https://threejs-journey.com/
+    Font Animations
+        https://codepen.io/sanprieto/pen/XWNjBdb (three.js)
+        https://codepen.io/dhruvil_52/pen/vYqvMwL
+	Cursor Animations
+        https://codepen.io/soju22/pen/KKQaGrE
+        https://codepen.io/ko-yelie/pen/LqXWWx
+	Header layout Animation
+        https://codepen.io/soju22/pen/zbjNWy
+        https://codepen.io/cjp/pen/MGwPMb 
+    Rotate Animation
+        https://codepen.io/vcomics/pen/OZPayy
+2. 3D Modeling & Animation
+   Blender/3ds Max/Maya: Learn how to create 3D models and animations using professional software.
+   Exporting Models: Understand how to export models in formats compatible with web technologies (e.g., GLTF, OBJ, FBX).
+3. 3D Graphics Concepts
+   Mesh: The basic building block of 3D objects.
+   Textures & Materials: Learn how to apply images and properties to 3D models to make them look realistic.
+   Lighting: Understand how to set up different types of lights to illuminate your 3D scenes.
+   Camera & Perspective: Learn how to control the camera to create dynamic views and animations.
+   Animations: Create and export animations that can be triggered in the browser.
+4. Shaders
+   GLSL (OpenGL Shading Language): Learn how to write custom shaders to control the appearance of 3D objects (e.g., lighting effects, textures).
+   Shader Libraries: Explore libraries like ShaderToy for inspiration and ready-made shaders.
+5. Performance Optimization
+   Level of Detail (LOD): Reduce the complexity of 3D models based on the viewer's distance.
+   Culling: Techniques like frustum culling to improve rendering performance by not drawing objects outside the camera’s view.
+   Optimization Tools: Use tools to optimize assets and ensure smooth performance (e.g., Draco compression for GLTF models).
+6. Interactivity
+   Raycasting: Learn how to detect interactions with 3D objects.
+   Physics Engines: Use physics libraries (e.g., Cannon.js, Ammo.js) to add realistic motion and collisions.
+7. Animation Libraries
+   GSAP (GreenSock Animation Platform): Powerful library for creating high-performance animations, including 3D animations.
+   Anime.js: Lightweight library for creating animations that can work alongside 3D libraries.
+8. 3D File Formats
+   GLTF/GLB: Widely used formats for 3D models on the web, optimized for WebGL.
+   OBJ/FBX: Common 3D file formats supported by many 3D modeling tools.
+9. WebXR
+   Virtual & Augmented Reality: Learn how to create immersive 3D experiences that work with VR/AR devices.
+
+
+	
+
+
+
+
+
+
+
+
+
