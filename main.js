@@ -45,11 +45,21 @@ scene.add(directionalLightHelper);
 const cameraHelper = new THREE.CameraHelper(camera);
 scene.add(cameraHelper);
 
+const loader = new THREE.TextureLoader();
+const color = loader.load("./images/earth.jpg");
+const roughness = loader.load("./images/roughness.png"); // use for rough or smooth
+const normal = loader.load("./images/normal.png");
+const matel = loader.load("./images/matel.jpg"); // use for shine
+
 // SphereGeometry
 camera.position.z = 30;
-const geometry = new THREE.SphereGeometry(15, 32, 16);
+const geometry = new THREE.SphereGeometry(15, 32, 100);
 const material = new THREE.MeshStandardMaterial({
-  color: "blue",
+  map: color,
+  roughnessMap: roughness,
+  normalMap: normal,
+  metalnessMap: matel,
+  // color: "blue",
   // wireframe: true, // remove this line if you want solid object
   // side: THREE.DoubleSide,
   // roughness: 0.5, // 0 is smooth (like a mirror), 1 is rough,
