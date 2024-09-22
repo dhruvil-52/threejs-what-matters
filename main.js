@@ -10,10 +10,21 @@ const camera = new THREE.PerspectiveCamera(
   0.1,
   1000
 );
-camera.position.z = 5;
-
 // make geometry and material then combine it to mesh
-const geometry = new THREE.BoxGeometry(1, 1, 1);
+
+// cube geometry
+// camera.position.z = 30; // from where (place) you want to show your object
+// const geometry = new THREE.BoxGeometry(1, 1, 1);
+// const material = new THREE.MeshBasicMaterial({
+//   color: 0x00ff00,
+//   wireframe: true, // remove this line if you want solid object
+// });
+// const cube = new THREE.Mesh(geometry, material);
+// scene.add(cube);
+
+// SphereGeometry
+camera.position.z = 30;
+const geometry = new THREE.SphereGeometry(15, 32, 16);
 const material = new THREE.MeshBasicMaterial({
   color: 0x00ff00,
   wireframe: true, // remove this line if you want solid object
