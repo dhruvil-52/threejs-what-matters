@@ -23,28 +23,30 @@ const camera = new THREE.PerspectiveCamera(
 // const cube = new THREE.Mesh(geometry, material);
 // scene.add(cube);
 
-// AxesHelper (visualizes the axes: red = X, green = Y, blue = Z)
-const axesHelper = new THREE.AxesHelper(5); // Length of the axes lines
-scene.add(axesHelper);
+// Ambient Light (from every where there are same light)
+const ambientLight = new THREE.AmbientLight(0xffffff, 1); // White ambient light with intensity 1
+scene.add(ambientLight);
 
-// GridHelper (a grid plane)
-const gridHelper = new THREE.GridHelper(100, 100); // Size of grid and number of divisions
-scene.add(gridHelper);
-
-// DirectionalLightHelper (shows the direction of a directional light)
-
-const directionalLight = new THREE.DirectionalLight(0xffffff, 5); // High intensity light
+// Directional Light (if you want to throw light from perticular direction)
+const directionalLight = new THREE.DirectionalLight(0xffffff, 5); // White light with high intensity
 directionalLight.position.set(10, 20, 15); // Set the position of the light
 scene.add(directionalLight);
+
+// Directional Light Helper
 const directionalLightHelper = new THREE.DirectionalLightHelper(
   directionalLight,
-  5
-); // 5 is the size of the helper
+  5 // 5 is the size of the helper
+);
 scene.add(directionalLightHelper);
 
-// CameraHelper (visualizes the frustum of the camera)
-const cameraHelper = new THREE.CameraHelper(camera);
-scene.add(cameraHelper);
+// Point Light (simulate light sources that emit light in all directions from a single point, similar to a light bulb.)
+const pointLight = new THREE.PointLight("red", 1, 10, 2); // White light, intensity 1, distance 100
+pointLight.position.set(-10, -2, -15); // Set the position of the light
+scene.add(pointLight);
+
+// Point Light Helper
+const pointLightHelper = new THREE.PointLightHelper(pointLight, 1); // 1 is the size of the helper
+scene.add(pointLightHelper);
 
 const loader = new THREE.TextureLoader();
 const color = loader.load("./images/earth.jpg");
