@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader.js";
 import GUI from "lil-gui";
 
 // create scene (whole world)
@@ -11,6 +12,17 @@ const camera = new THREE.PerspectiveCamera(
   0.1,
   1000
 );
+
+const rgbeLoader = new RGBELoader();
+rgbeLoader.load(
+  "./images/galaxy3.hdr",
+  (texture) => {
+    texture.mapping = THREE.EquirectangularReflectionMapping;
+    scene.environment = texture;
+    scene.background = texture;
+  }
+);
+
 // make geometry and material then combine it to mesh
 
 // cube geometry
@@ -50,9 +62,9 @@ scene.add(pointLightHelper);
 
 const loader = new THREE.TextureLoader();
 // set background image
-const backgroundTexture = loader.load("./images/galaxy.jpg", () => {
-  scene.background = backgroundTexture;
-});
+// const backgroundTexture = loader.load("./images/galaxy.jpg", () => {
+//   scene.background = backgroundTexture;
+// });
 
 const color = loader.load("./images/earth.jpg");
 const roughness = loader.load("./images/roughness.png"); // use for rough or smooth
